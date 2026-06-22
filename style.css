@@ -1,0 +1,174 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.hero{
+    min-height:100vh;
+    background:url("https://images.unsplash.com/photo-1497366754035-f200968a6e72?w=1600")
+    center center/cover no-repeat;
+    position:relative;
+}
+
+.overlay{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.55);
+}
+
+.container{
+    width:90%;
+    max-width:1200px;
+    margin:auto;
+}
+
+.content{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:60px;
+    position:relative;
+    z-index:1;
+}
+
+.left{
+    flex:1;
+    color:white;
+}
+
+.left h1{
+    font-size:60px;
+    line-height:1.2;
+    margin-bottom:20px;
+}
+
+.left p{
+    font-size:18px;
+    line-height:1.8;
+    max-width:550px;
+    margin-bottom:30px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+.btn{
+    text-decoration:none;
+    padding:14px 30px;
+    border-radius:30px;
+    font-weight:bold;
+}
+
+.btn-blue{
+    background:#2196f3;
+    color:white;
+}
+
+.btn-outline{
+    border:2px solid white;
+    color:white;
+}
+
+.right{
+    flex:1;
+    display:flex;
+    justify-content:center;
+}
+
+.form-box{
+    width:350px;
+    background:rgba(255,255,255,0.15);
+    backdrop-filter:blur(8px);
+    padding:30px;
+    border-radius:10px;
+}
+
+.form-box h2{
+    color:white;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+.form-box form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.form-box input{
+    padding:12px;
+    border:none;
+    outline:none;
+    border-radius:5px;
+}
+
+.form-box button{
+    padding:12px;
+    border:none;
+    background:#2196f3;
+    color:white;
+    border-radius:5px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+/* Tablet */
+
+@media (max-width: 992px){
+
+    .content{
+        flex-direction:column;
+        justify-content:center;
+        text-align:center;
+        padding:80px 0;
+    }
+
+    .left h1{
+        font-size:45px;
+    }
+
+    .left p{
+        margin:auto;
+        margin-bottom:30px;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 768px){
+
+    .left h1{
+        font-size:34px;
+    }
+
+    .left p{
+        font-size:16px;
+    }
+
+    .buttons{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .btn{
+        width:200px;
+        text-align:center;
+    }
+
+    .form-box{
+        width:100%;
+        max-width:350px;
+    }
+}
